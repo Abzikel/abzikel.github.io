@@ -3,11 +3,267 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Hola Mundo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portafolio de Alex Bañuelos - Ingeniero de Software especializado en Desarrollo Web Full-Stack, Análisis de Datos y Automatizaciones.">
+    <meta name="author" content="Alex Bañuelos">
+    <meta name="theme-color" content="#0d1117">
+    <title>Alex Bañuelos | Ingeniero de Software</title>
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abzikel.dev/">
+    <meta property="og:title" content="Alex Bañuelos | Ingeniero de Software">
+    <meta property="og:description"
+        content="Portafolio de Alex Bañuelos - Ingeniero de Software especializado en Desarrollo Web Full-Stack, Análisis de Datos y Automatizaciones.">
+    <meta property="og:image" content="https://abzikel.dev/assets/img/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://abzikel.dev/">
+    <meta property="twitter:title" content="Alex Bañuelos | Ingeniero de Software">
+    <meta property="twitter:description"
+        content="Portafolio de Alex Bañuelos - Ingeniero de Software especializado en Desarrollo Web Full-Stack, Análisis de Datos y Automatizaciones.">
+    <meta property="twitter:image" content="https://abzikel.dev/assets/img/og-image.png">
+
+    <link rel="canonical" href="https://abzikel.dev/">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+
+    <!-- Preload Hero Image for LCP Optimization -->
+    <link rel="preload" href="assets/img/hero.webp" as="image">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <h1>Hola Mundo</h1>
+
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="/" class="logo">Alex Bañuelos</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <section id="hero" class="hero-section fade-in-section">
+            <div class="container">
+                <h1>Creemos en lo imposible para lograr hacerlo posible</h1>
+                <p class="hero-subtitle">Ingeniero de Software | Desarrollo Full-Stack | Análisis de Datos |
+                    Automatizaciones</p>
+                <a href="#projects" class="btn btn-primary">Ver mi trabajo</a>
+            </div>
+        </section>
+
+        <section id="about" class="about-section fade-in-section">
+            <div class="container">
+                <h2>Sobre Mí</h2>
+
+                <div class="about-content">
+                    <p>Soy un Ingeniero en Desarrollo de Software con sólida experiencia en desarrollo independiente
+                        para empresas y automatización de procesos empresariales.</p>
+                    <p>Mi filosofía de trabajo se basa en entender a profundidad las necesidades de cada uno de mis
+                        clientes para diseñar
+                        soluciones tecnológicas a la medida. Me enfoco en entregar productos altamente optimizados que
+                        maximicen el valor de tus recursos. Priorizo la calidad y la creación de estructuras eficientes,
+                        garantizando siempre un rendimiento superior, máxima seguridad y una resolución efectiva a tus
+                        necesidades.</p>
+                </div>
+
+                <img src="/assets/img/profile-picture.webp" alt="Foto de perfil de Alex Bañuelos"
+                    class="img-placeholder profile-img" loading="lazy">
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section fade-in-section">
+            <div class="container">
+                <h2>Proyectos Destacados</h2>
+                <div class="projects-grid">
+
+                    <article class="project-card card-p1 fade-in-section">
+                        <div class="card-content">
+                            <img src="/assets/img/projects/sistema-etr/sistema-etr-preview.webp"
+                                alt="Vista previa del Sistema ETR" class="img-placeholder project-img" loading="lazy">
+
+                            <h3>Sistema ETR</h3>
+                            <div class="project-tags">
+                                <span class="tech-badge">
+                                    <span class="tech-icon"
+                                        style="--icon-url: url('/assets/img/icon-firebase.svg');"></span>
+                                    Firebase
+                                </span>
+                                <span class="tech-badge">
+                                    <span class="tech-icon"
+                                        style="--icon-url: url('/assets/img/icon-android.svg');"></span>
+                                    Android
+                                </span>
+                                <span class="tech-badge">
+                                    <span class="tech-icon"
+                                        style="--icon-url: url('/assets/img/icon-esp32.svg');"></span>
+                                    ESP32
+                                </span>
+                                <span class="tech-badge">
+                                    <span class="tech-icon"
+                                        style="--icon-url: url('/assets/img/icon-googleplay.svg');"></span>
+                                    Google Play
+                                </span>
+                            </div>
+                            <p>El Sistema de Entrenamiento en Tiro de Reacción (Sistema ETR) es una solución para
+                                aquellos profesionales y entusiastas en el tiro deportivo con arma de aire que quieren
+                                mejorar sus habilidades.</p>
+                            <a href="#" class="btn-link">Ver detalles &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card card-p2 fade-in-section">
+                        <div class="card-content">
+                            <img src="/assets/img/projects/gestion-agricola/gestion-agricola-preview.webp"
+                                alt="Vista previa del Sistema de Gestión Agrícola" class="img-placeholder project-img"
+                                loading="lazy">
+
+                            <h3>Sistema de Gestión Agrícola</h3>
+                            <div class="project-tags">
+                                <span class="tech-badge">
+                                    <span class="tech-icon"
+                                        style="--icon-url: url('/assets/img/icon-android.svg');"></span>
+                                    Android
+                                </span>
+                                <span class="tech-badge">
+                                    <span class="tech-icon"
+                                        style="--icon-url: url('/assets/img/icon-firebase.svg');"></span>
+                                    Firebase
+                                </span>
+                                <span class="tech-badge">
+                                    <span class="tech-icon"
+                                        style="--icon-url: url('/assets/img/icon-cloudfunctions.svg');"></span>
+                                    Cloud Functions
+                                </span>
+                            </div>
+                            <p>Aplicación móvil de uso interno para consultoría agrícola. Facilita la gestión integral
+                                de asesores, clientes, cultivos y control de plagas, automatizando la generación de
+                                reportes y diagnósticos.</p>
+                            <a href="#" class="btn-link">Ver detalles &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card card-p3 fade-in-section">
+                        <div class="card-content">
+                            <img src="/assets/img/projects/multitireshop/multireshop-preview.webp"
+                                alt="Vista previa del Plugin de Reservas Multi Tires"
+                                class="img-placeholder project-img" loading="lazy">
+
+                            <h3>Plugin de Reservas MultiTire Shop</h3>
+                            <div class="project-tags">
+                                <span class="tech-badge">
+                                    <span class="tech-icon"
+                                        style="--icon-url: url('/assets/img/icon-wordpress.svg');"></span>
+                                    WordPress
+                                </span>
+                                <span class="tech-badge">
+                                    <span class="tech-icon" style="--icon-url: url('/assets/img/icon-php.svg');"></span>
+                                    PHP
+                                </span>
+                                <span class="tech-badge">
+                                    <span class="tech-icon"
+                                        style="--icon-url: url('/assets/img/icon-mysql.svg');"></span>
+                                    MySQL
+                                </span>
+                            </div>
+                            <p>Solución personalizada para la gestión de citas de servicios automotrices. Cuenta con un
+                                panel para que los clientes agenden su cita, notificaciones por correo electrónico y un
+                                panel de
+                                administración completo.</p>
+                            <a href="#" class="btn-link">Ver detalles &rarr;</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section fade-in-section">
+            <div class="container">
+                <h2>Contacto</h2>
+                <p class="contact-intro">¿Tienes un proyecto en mente o buscas optimizar tus procesos empresariales?
+                    Contáctame directamente a través de cualquiera de mis canales y hablemos sobre cómo puedo ayudarte.
+                </p>
+
+                <div class="contact-grid">
+                    <a href="mailto:contact@abzikel.dev" class="contact-card">
+                        <div class="contact-icon-wrapper">
+                            <svg class="contact-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">Correo Electrónico</span>
+                            <span class="contact-value">contact@abzikel.dev</span>
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/523221170615" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <div class="contact-icon-wrapper">
+                            <svg class="contact-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.405-.881-.733-1.476-1.639-1.649-1.935-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">WhatsApp</span>
+                            <span class="contact-value">+52 322 117 0615</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Alex Bañuelos</p>
+            <div class="social-links">
+                <a href="https://github.com/Abzikel" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub Profile">
+                    <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.285 0 .315.225.69.825.57C20.565 21.795 24 17.31 24 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/abzikel/" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn Profile">
+                    <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+
 </body>
 
 </html>

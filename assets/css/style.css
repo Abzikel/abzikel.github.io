@@ -1,0 +1,644 @@
+/* Root Variables: Modern Tech/Pastel Theme */
+:root {
+    /* Backgrounds: Pure Dark Theme for maximum contrast */
+    --bg-color: #0d1117;
+    --bg-card: #161b22;
+    --bg-card-hover: #1c2128;
+
+    /* Text */
+    --text-primary: #f0f6fc;
+    --text-secondary: #8b949e;
+
+    /* Main Accent: Luminous Pastel Purple for high contrast */
+    --accent-primary: #BDA8E5;
+    --accent-hover: #a37ee8;
+    --border-color: #30363d;
+
+    /* Project Specific Accents */
+    /* Brighter Pastel Red */
+    --accent-p1: #ff9aa2;
+    /* Brighter Pastel Green */
+    --accent-p2: #a6e3a1;
+    /* Brighter Pastel Yellow */
+    --accent-p3: #f9e2af;
+
+    --font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --container-width: 1200px;
+    /* Increased transition time for smoother effects */
+    --transition: all 0.4s ease;
+}
+
+/* Base Styles & Accessibility */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--accent-primary);
+    color: var(--bg-color);
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.2s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    color: var(--text-primary);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    /* Primary color used for contrast */
+    border-bottom: 2px solid var(--accent-primary);
+    padding-bottom: 10px;
+    /* Keeps the border exactly the width of the text */
+    display: inline-block;
+}
+
+/* Layout: Header */
+.main-header {
+    background-color: rgba(13, 17, 23, 0.85);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    /* Text Wipe Effect: Starts with Accent, fills with Text Primary */
+    background: linear-gradient(to right, var(--text-primary) 50%, var(--accent-primary) 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.4s ease-out;
+}
+
+.logo:hover {
+    background-position: 0 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+
+    /* Text Wipe Effect: Starts with Text Secondary, fills with Accent */
+    background: linear-gradient(to right, var(--accent-primary) 50%, var(--text-secondary) 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.4s ease-out;
+}
+
+.main-nav a:hover {
+    background-position: 0 0;
+}
+
+/* Sections Common */
+section {
+    padding: 80px 0;
+}
+
+/* Hero Section */
+.hero-section {
+    /* Increased padding to make the background image more visible */
+    text-align: center;
+    padding: 160px 0 120px;
+
+    /* Background setup: Dark gradient overlay + Image URL */
+    /* The gradient ensures text readability over light/busy images */
+    background: linear-gradient(to bottom, rgba(13, 17, 23, 0.7), rgba(13, 17, 23, 1)),
+        url('../img/hero.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    /* Keeps text above the background */
+    position: relative;
+    z-index: 2;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section .btn {
+    position: relative;
+    z-index: 2;
+}
+
+/* About Section */
+.about-content {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--bg-card);
+    /* Permanent top border */
+    border-top: 2px solid transparent;
+    border-radius: 8px;
+    padding: 30px;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+.project-card:hover {
+    background-color: var(--bg-card-hover);
+    transform: translateY(-5px);
+}
+
+/* Unified Progressive Drawing Border Effect */
+@property --angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 35deg;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    /* Overlap parent border perfectly */
+    inset: -2px;
+    /* Outer radius matches inner 8px + 2px inset for concentric curves */
+    border-radius: 10px;
+    /* Single unified border, color is inherited per card */
+    border: 2px solid transparent;
+    pointer-events: none;
+    z-index: 1;
+
+    /* Initial mask reveals only the top border and top corners */
+    --angle: 35deg;
+    -webkit-mask-image: conic-gradient(from 0deg at 50% 50%, black 0deg, black var(--angle), transparent var(--angle), transparent calc(360deg - var(--angle)), black calc(360deg - var(--angle)), black 360deg);
+    mask-image: conic-gradient(from 0deg at 50% 50%, black 0deg, black var(--angle), transparent var(--angle), transparent calc(360deg - var(--angle)), black calc(360deg - var(--angle)), black 360deg);
+    transition: --angle 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover expands the angle to 180deg, revealing sides and bottom entirely */
+.project-card:hover::before {
+    --angle: 180deg;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Pushes description down to align with the bottom */
+.card-content>p {
+    margin-top: auto;
+}
+
+/* Project Tech Tags / Badges */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tech-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+    cursor: default;
+}
+
+.tech-icon {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background: var(--icon-url) center / contain no-repeat;
+    transition: transform 0.3s ease;
+}
+
+/* Hover interaction that matches the footer link animations */
+.tech-badge:hover {
+    transform: translateY(-3px);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+
+/* Project Specific Progressive Hover Effects */
+
+/* Sistema ETR Project */
+.card-p1 {
+    color: #ffffff;
+}
+
+.card-p1::before {
+    border-color: var(--accent-p1);
+}
+
+.card-p1 .tech-badge:hover {
+    color: var(--accent-p1);
+    border-color: var(--accent-p1);
+}
+
+.card-p1 h3 {
+    color: var(--accent-p1);
+}
+
+.card-p1:hover {
+    box-shadow: 0 8px 25px -5px rgba(255, 154, 162, 0.3);
+}
+
+.card-p1 .btn-link:hover {
+    color: var(--accent-p1);
+}
+
+/* App Agricola Project */
+.card-p2 {
+    color: #ffffff;
+}
+
+.card-p2::before {
+    border-color: var(--accent-p2);
+}
+
+.card-p2 .tech-badge:hover {
+    color: var(--accent-p2);
+    border-color: var(--accent-p2);
+}
+
+.card-p2 h3 {
+    color: var(--accent-p2);
+}
+
+.card-p2:hover {
+    box-shadow: 0 8px 25px -5px rgba(166, 227, 161, 0.3);
+}
+
+.card-p2 .btn-link:hover {
+    color: var(--accent-p2);
+}
+
+/* WP Plugin Project */
+.card-p3 {
+    color: #ffffff;
+}
+
+.card-p3::before {
+    border-color: var(--accent-p3);
+}
+
+.card-p3 .tech-badge:hover {
+    color: var(--accent-p3);
+    border-color: var(--accent-p3);
+}
+
+.card-p3 h3 {
+    color: var(--accent-p3);
+}
+
+.card-p3:hover {
+    box-shadow: 0 8px 25px -5px rgba(249, 226, 175, 0.3);
+}
+
+.card-p3 .btn-link:hover {
+    color: var(--accent-p3);
+}
+
+/* Contact Section */
+.contact-intro {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-card:hover {
+    background-color: var(--bg-card-hover);
+    transform: translateY(-5px);
+    border-color: var(--accent-primary);
+}
+
+.contact-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(189, 168, 229, 0.1);
+    border-radius: 50%;
+    color: var(--accent-primary);
+    flex-shrink: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-card:hover .contact-icon-wrapper {
+    background-color: var(--accent-primary);
+    color: var(--bg-color);
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.contact-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+}
+
+/* Image Placeholders */
+.img-placeholder {
+    /* Sleek default gradient fallback when no image is provided */
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--border-color) 100%);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Hero graphic/image slot */
+.hero-img {
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+    margin: 40px auto 0;
+}
+
+/* About me profile picture slot */
+.profile-img {
+    width: 100%;
+    max-width: 280px;
+    height: 340px;
+    border-radius: 8px;
+    margin: 0;
+    object-fit: cover;
+    justify-self: center;
+    display: block;
+}
+
+/* Project thumbnail slot */
+.project-img {
+    width: 100%;
+    height: 160px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Darker slot inside the card */
+    object-fit: contain;
+    display: block;
+}
+
+/* Layout adjustment for About section to create a two-column layout */
+.about-section .container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    column-gap: 50px;
+    row-gap: 30px;
+    align-items: center;
+}
+
+.about-section h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+/* Buttons & Links */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--accent-primary);
+    /* Dark text on pastel button for contrast */
+    color: var(--bg-color);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: var(--accent-hover);
+    transform: scale(1.05);
+}
+
+.btn-link {
+    /* Hidden temporarily until details view is implemented */
+    display: none;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+    align-self: flex-start;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.main-footer {
+    border-top: 1px solid var(--border-color);
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main-footer p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+/* SVG Icons */
+.social-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--accent-primary);
+    transform: translateY(-3px);
+}
+
+/* Scroll Animations */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile Adjustments (Responsive) */
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+
+    .hero-section {
+        padding: 80px 0 60px;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .about-section .container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section h2 {
+        order: 1;
+    }
+
+    .about-content {
+        order: 3;
+    }
+
+    .profile-img {
+        height: 320px;
+        margin: 0 auto;
+        order: 2;
+    }
+
+    .main-header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
