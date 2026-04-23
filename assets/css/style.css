@@ -543,6 +543,65 @@ section {
     text-decoration: underline;
 }
 
+/* Error 404 Section */
+.error-section {
+    /* Center content vertically between header and footer */
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.error-container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.error-code {
+    /* Fluid typography for the error code */
+    font-size: clamp(6rem, 15vw, 12rem);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 10px;
+    /* Gradient text effect matching the project theme */
+    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-p1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Continuous floating animation */
+    animation: float 6s ease-in-out infinite;
+}
+
+.error-title {
+    border-bottom: none;
+    /* Remove the default border-bottom from h2 elements */
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.error-message {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 /* Footer */
 .main-footer {
     border-top: 1px solid var(--border-color);
