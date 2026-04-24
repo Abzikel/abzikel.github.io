@@ -67,9 +67,7 @@
         <div class="container">
             <div class="logo-wrapper">
                 <a href="/" class="logo">Alex Bañuelos</a>
-                <!-- Initial image is set to idle-1.png to prevent layout shifts on load -->
-                <img id="fox-character" src="/assets/char/idle/idle-1.png" alt="" aria-hidden="true"
-                    class="fox-companion">
+                <img id="fox-character" alt="" aria-hidden="true" class="fox-companion">
             </div>
             <nav class="main-nav">
                 <ul>
@@ -285,8 +283,8 @@
     <!-- Fox Tracking Toggle UI -->
     <div class="fox-toggle-wrapper">
         <span class="fox-toggle-label">🦊</span>
-        <label class="fox-switch">
-            <input type="checkbox" id="fox-toggle">
+        <label class="fox-switch" for="fox-toggle">
+            <input type="checkbox" id="fox-toggle" aria-label="Activar o desactivar seguimiento de mascota">
             <span class="fox-slider"></span>
         </label>
     </div>
