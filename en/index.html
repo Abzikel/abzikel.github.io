@@ -52,7 +52,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.min.css">
 </head>
 
 <body>
@@ -61,7 +61,12 @@
 
     <header class="main-header">
         <div class="container">
-            <a href="/en/" class="logo">Alex Bañuelos</a>
+            <div class="logo-wrapper">
+                <a href="/en/" class="logo">Alex Bañuelos</a>
+                <!-- Initial image is set to idle-1.png to prevent layout shifts on load -->
+                <img id="fox-character" src="/assets/char/idle/idle-1.png" alt="" aria-hidden="true"
+                    class="fox-companion">
+            </div>
             <nav class="main-nav">
                 <ul>
                     <li><a href="#about">About</a></li>
@@ -268,7 +273,17 @@
         </div>
     </footer>
 
-    <script src="/assets/js/main.js" defer></script>
+    <!-- Fox Tracking Toggle UI -->
+    <div class="fox-toggle-wrapper">
+        <span class="fox-toggle-label">🦊</span>
+        <label class="fox-switch">
+            <input type="checkbox" id="fox-toggle">
+            <span class="fox-slider"></span>
+        </label>
+    </div>
+
+    <script src="/assets/js/fox-controller.min.js" defer></script>
+    <script src="/assets/js/main.min.js" defer></script>
 
 </body>
 

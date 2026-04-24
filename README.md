@@ -32,6 +32,10 @@ Solución personalizada para WordPress enfocada en la gestión de citas de servi
 * **Correo Electrónico:** [contact@abzikel.dev](mailto:contact@abzikel.dev)
 * **WhatsApp:** [+52 322 117 0615](https://wa.me/523221170615)
 
+## Créditos
+
+* **Mascota Virtual (Zorrito):** [2D Pixel Art Fox Sprites](https://elthen.itch.io/2d-pixel-art-fox-sprites) creados por [Elthen](https://www.patreon.com/cw/elthen). Utilizados bajo la licencia [*Elthen's Common Sense License 1.0*](https://www.patreon.com/posts/licensing-27430241).
+
 ---
 **© Alex Bañuelos.** Todos los derechos reservados.
 
@@ -69,6 +73,10 @@ Custom WordPress solution focused on automotive service appointment management w
 Do you have a project in mind or are you looking to optimize your business processes?
 * **Email:** [contact@abzikel.dev](mailto:contact@abzikel.dev)
 * **WhatsApp:** [+52 322 117 0615](https://wa.me/523221170615)
+
+## Credits
+
+* **Virtual Companion (Fox):** [2D Pixel Art Fox Sprites](https://elthen.itch.io/2d-pixel-art-fox-sprites) created by [Elthen](https://www.patreon.com/cw/elthen). Used under [*Elthen's Common Sense License 1.0*](https://www.patreon.com/posts/licensing-27430241).
 
 ---
 **© Alex Bañuelos.** All rights reserved.
